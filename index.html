@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Formulário de Endereço</h2>
+    <form>
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" maxlength="9" placeholder="00000-000">
+        <button type="button" onclick="buscarEndereco()">Buscar</button>
+        <br><br>
+
+        <label for="logradouro">Rua:</label>
+        <input type="text" id="logradouro" name="logradouro" readonly>
+        <br><br>
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" readonly>
+        <br><br>
+
+        <label for="localidade">Cidade:</label>
+        <input type="text" id="localidade" name="localidade" readonly>
+        <br><br>
+
+        <label for="uf">Estado:</label>
+        <input type="text" id="uf" name="uf" readonly>
+    </form>
+    <script src="/script.js"></script>
+</body>
+</html>
