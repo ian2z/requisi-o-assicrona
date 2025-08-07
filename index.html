@@ -1,33 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário de Endereço</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h2>Formulário de Endereço</h2>
-    <form>
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" maxlength="9" placeholder="00000-000">
-        <button type="button" onclick="buscarEndereco()">Buscar</button>
-        <br><br>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-        <label for="logradouro">Rua:</label>
-        <input type="text" id="logradouro" name="logradouro" readonly>
-        <br><br>
+  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <h2 class="text-2xl font-semibold text-center mb-6">Formulário de Endereço</h2>
 
-        <label for="bairro">Bairro:</label>
-        <input type="text" id="bairro" name="bairro" readonly>
-        <br><br>
+    <form class="space-y-4">
+      <div>
+        <label for="cep" class="block text-sm font-medium text-gray-700">CEP:</label>
+        <input type="text" id="cep" name="cep" maxlength="9" placeholder="00000-000"
+          class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-500">
+      </div>
 
-        <label for="localidade">Cidade:</label>
-        <input type="text" id="localidade" name="localidade" readonly>
-        <br><br>
+      <div class="text-center">
+        <button type="button" onclick="buscarEndereco()"
+          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+          Buscar
+        </button>
+      </div>
 
-        <label for="uf">Estado:</label>
-        <input type="text" id="uf" name="uf" readonly>
+      <div>
+        <label for="logradouro" class="block text-sm font-medium text-gray-700">Rua:</label>
+        <input type="text" id="logradouro" name="logradouro" readonly
+          class="mt-1 w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm">
+      </div>
+
+      <div>
+        <label for="bairro" class="block text-sm font-medium text-gray-700">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" readonly
+          class="mt-1 w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm">
+      </div>
+
+      <div>
+        <label for="localidade" class="block text-sm font-medium text-gray-700">Cidade:</label>
+        <input type="text" id="localidade" name="localidade" readonly
+          class="mt-1 w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm">
+      </div>
+
+      <div>
+        <label for="uf" class="block text-sm font-medium text-gray-700">Estado:</label>
+        <input type="text" id="uf" name="uf" readonly
+          class="mt-1 w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm">
+      </div>
     </form>
-    <script src="/script.js"></script>
+  </div>
+  <script src="/script.js"></script>
 </body>
 </html>
